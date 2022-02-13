@@ -1,0 +1,68 @@
+{%extends 'base.html' %}
+
+{% load static %}
+
+{%block content%}
+
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/about_1.jpg' %}');"  id="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="text-white font-weight-bold">Terms And Services</h1>
+          <div class="custom-breadcrumbs">
+            <a href="#">Home</a> <span class="mx-2 slash">/</span>
+            <span class="text-white"><strong> Terms</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+  </section>
+  
+
+
+
+
+  <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('{% static 'images/hero_1.jpg' %}');">
+    <div class="container">
+      {% if request.user.role == "employer" %}
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-white">Want To Hire?</h2>
+          <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
+            impedit.</p>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <a href="{% url 'jobapp:create-job' %}" class="btn btn-warning btn-block btn-lg">Post Your Job</a>
+        </div>
+      </div>
+      {% elif request.user.role == "employee" %}
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-white">Looking For A Job?🔎</h2>
+          <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
+            impedit.</p>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <a href="{% url 'jobapp:job-list' %}" class="btn btn-warning btn-block btn-lg">Job List</a>
+        </div>
+      </div>
+      {% else %}
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-white">Looking For A Job?🔎</h2>
+          <p class="mb-0 text-white lead">Lorem ipsum dolor sit amet consectetur adipisicing elit tempora adipisci
+            impedit.</p>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <a href="{% url 'account:employee-register' %}" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+
+
+{%endblock%}

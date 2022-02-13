@@ -1,0 +1,336 @@
+<footer class="site-footer">
+
+	<a href="#top" class="smoothscroll scroll-top">
+	  <span class="icon-keyboard_arrow_up"></span>
+	</a>
+  
+	<div class="container">
+	  <div class="row mb-5">
+		<div class="col-6 col-md-3 mb-4 mb-md-0">
+			<h4 class="webintern_footer_title h5"><small>Category</small></h4>
+
+		  <ul class="list-unstyled">
+			<li><a href="#">Web Design</a></li>
+			<li><a href="#">Graphic Design</a></li>
+			<li><a href="#">Web Developers</a></li>
+			<li><a href="#">Python</a></li>
+			<li><a href="#">HTML5</a></li>
+			<li><a href="#">CSS3</a></li>
+		  </ul>
+		</div>
+		<div class="col-6 col-md-3 mb-4 mb-md-0">
+
+			<h4 class="webintern_footer_title h5"><small>Quick Links</small></h4>
+			<ul class="webintern-footer-list">
+			<li><a href="{% url 'jobapp:home' %}">Home</a></li>
+			<li><a href="{% url 'jobapp:about' %}">About Us</a></li>
+			<li><a href="{% url 'jobapp:contact' %}">Contact Us</a></li>
+			</ul>
+
+		</div>
+		<div class="col-6 col-md-3 mb-4 mb-md-0">
+      <h4 class="webintern_footer_title h5"><small>Support</small></h4>
+
+		  <ul class="list-unstyled">
+			<li><a href="{% url 'jobapp:privacy' %}">Privacy</a></li>
+			<li><a href="{% url 'jobapp:terms' %}">Terms of Service</a></li>
+		  </ul>
+		</div>
+		<div class="col-6 col-md-3 mb-4 mb-md-0">
+      <h4 class="webintern_footer_title h5"><small>Contact Us</small></h4>
+
+		  <div class="footer-social">
+			<ul class="social-icons">
+			  <li><a class="facebook" href="https://www.facebook.com/profile.php?id=100061353744323"><i class="fa fa-facebook"></i></a></li>
+			  <li><a class="twitter" href="https://mobile.twitter.com/i/flow/loginhttps://mobile.twitter.com/i/flow/login"><i class="fa fa-twitter"></i></a></li>
+			  <li><a class="dribbble" href="https://www.instagram.com/"><i class="fa fa-dribbble"></i></a></li>
+			  <li><a class="linkedin" href="https://www.linkedin.com/"><i class="fa fa-linkedin"></i></a></li>   
+			</ul>
+		  </div>
+		</div>
+	  </div>
+  
+	  <div class="col-xs-12 col-md-4 col-sm-6">
+		<div class="marg-sm-b30"></div>
+		<!-- webintern_footer_title -->
+		<h4 class="webintern_footer_title h5"><small>Subscribe Newsletter</small></h4>
+		<div class="empty-space marg-lg-b20"></div>
+	  
+		<!--
+		<div class="simple-text last dark ">
+		<p>Get latest updates and offers.</p>
+		</div>
+		-->
+		
+	  
+		<a href="{% url 'letter:subscribe' %}" class="btn btn-warning btn-block btn-lg"><span class="text">JOIN US</span></a></a>
+	   
+	  <div class="row text-center">
+		<div class="col-12">
+		  <p class="copyright"><small>
+			Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved  
+		  </small></p>
+		</div>
+	  </div>
+	</div>
+  </footer>
+  
+  </div>
+  
+  
+  
+  <style>
+  
+  /*=================footer css start==============*/
+  
+  .text{
+	font-weight: bolder !important;
+	font-size: larger !important;
+  }
+  .webintern-footer {
+	background: #0d2034;
+	}
+	
+	.webintern-footer-inner {
+	padding-top: 80px;
+	padding-bottom: 50px;
+	}
+	
+	.webintern-footer-logo {
+	display: inline-block;
+	}
+	
+	.webintern-footer .webintern-footer-inner .simple-text p {
+	color: #fff;
+	margin-top: 20px;
+	margin-bottom: 15px;
+	}
+	.simple-text p {
+	font-size: 15px;
+	color: #42435d;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	line-height: 26px;
+	margin-bottom: 0;
+	}
+	
+	.webintern-footer .webintern-footer-inner .simple-text a {
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 700;
+	color: #f2c21a;
+	font-size: 15px;
+	}
+	.footer-2 {
+	padding-left: 55px;
+	}
+	.webintern_footer_title {
+	margin-top: 0px;
+	margin-bottom: 25px;
+	}
+	.webintern_footer_title small {
+	font-family: 'Work Sans', sans-serif;
+	color: #fff;
+	font-weight: 700;
+	font-size: 18px;
+	text-transform: uppercase;
+	}
+	.webintern_footer_title:after {
+	content: '';
+	display: block;
+	width: 30px;
+	height: 2px;
+	background: #f2c21a;
+	margin-top: 15px;
+	}
+	.webintern-footer-list {
+	padding: 0;
+	}
+	.webintern-footer-list li {
+	margin-bottom: 17px;
+	list-style: none;
+	}
+	.webintern-footer-list a {
+	position: relative;
+	font-size: 15px;
+	line-height: 18px;
+	color: #fff;
+	padding-left: 0;
+	letter-spacing: 0.20px;
+	font-family: 'Open Sans', sans-serif;
+	}
+	.footer-3 {
+	padding-left: 65px;
+	}
+	.webintern-footer-inner .simple-text.last {
+	color: #d5d5d5;
+	font-size: 17px;
+	font-style: italic;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: 400;
+	}
+	.tt-subscribe {
+	position: relative;
+	}
+	.tt-subscribe input:not([type="submit"]) {
+	width: 100%;
+	height: 46px;
+	background: #fff;
+	font-size: 15px;
+	color: #838486;
+	padding-left: 20px;
+	padding-right: 70px;
+	border: 2px solid #fff;
+	-moz-border-radius: 3px;
+	border-radius: 3px;
+	
+	}
+	.tt-subscribe-submit {
+	background: #001b57;
+	}
+	
+	.tt-subscribe-submit {
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 52px;
+	height: 46px;
+	font-size: 18px;
+	line-height: 46px;
+	color: #2a2a2a;
+	text-align: center;
+	background: #001b57;
+	-moz-border-radius-topright: 3px;
+	border-top-right-radius: 3px;
+	-moz-border-radius-bottomright: 3px;
+	border-bottom-right-radius: 3px;
+	}
+	
+	
+	.tt-subscribe-submit i.fa-envelope:before {
+	content: "\f0e0";
+	position: relative;
+	z-index: 1;
+	color: #fff;
+	}
+	.tt-subscribe-submit input {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background: #51658d;
+	border: 0;
+	}
+	ul.tt-socail {
+	padding: 0;
+	margin-top: 30px;
+	}
+	.tt-socail li {
+	display: inline-block;
+	margin-right: 10px;
+	}
+	.tt-socail a {
+	display: block;
+	width: 36px;
+	height: 36px;
+	font-size: 17px;
+	line-height: 34px;
+	color: #fff;
+	text-align: center;
+	border: 1px solid #fff;
+	-moz-border-radius: 100%;
+	border-radius: 100%;
+	}
+	.webintern_footer_title small {
+		font-family: 'Work Sans', sans-serif;
+		color: #fff;
+		font-weight: 700;
+		font-size: 18px;
+		text-transform: uppercase;
+	}
+	.tt-copy
+	{
+	font-size: 15px;
+	line-height: 20px;
+	color: #fff;
+	background: #51658d;
+	padding: 30px 0;
+	font-family: 'Open Sans', sans-serif;
+	}
+	.tt-copy-right {
+	text-align: right;
+	}
+	
+	.social-icons
+  {
+	padding-left:0;
+	margin-bottom:0;
+	list-style:none
+  }
+  .social-icons li
+  {
+	display:inline-block;
+	margin-bottom:4px
+  }
+  .social-icons li.title
+  {
+	margin-right:15px;
+	text-transform:uppercase;
+	color:#96a2b2;
+	font-weight:700;
+	font-size:13px
+  }
+  .social-icons a{
+	background-color:#eceeef;
+	color:#818a91;
+	font-size:16px;
+	display:inline-block;
+	line-height:44px;
+	width:44px;
+	height:44px;
+	text-align:center;
+	margin-right:8px;
+	border-radius:100%;
+	-webkit-transition:all .2s linear;
+	-o-transition:all .2s linear;
+	transition:all .2s linear
+  }
+  .social-icons a:active,.social-icons a:focus,.social-icons a:hover
+  {
+	color:#fff;
+	background-color:#29aafe
+  }
+  .social-icons.size-sm a
+  {
+	line-height:34px;
+	height:34px;
+	width:34px;
+	font-size:14px
+  }
+  .social-icons a.facebook:hover
+  {
+	background-color:#3b5998
+  }
+  .social-icons a.twitter:hover
+  {
+	background-color:#00aced
+  }
+  .social-icons a.linkedin:hover
+  {
+	background-color:#007bb6
+  }
+  .social-icons a.dribbble:hover
+  {
+	background-color:#ea4c89
+  }
+  @media (max-width:767px)
+  {
+	.social-icons li.title
+	{
+	  display:block;
+	  margin-right:0;
+	  font-weight:600
+	}
+  }
+  
+	</style>

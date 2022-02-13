@@ -1,0 +1,85 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/contact_1.jpg' %}');" id="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="text-white font-weight-bold">📱 Contact us directly if you have any questions</h1>
+          <div class="custom-breadcrumbs">
+            <a href="#">Home</a> <span class="mx-2 slash"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+	
+  
+
+
+    <div class="container mb-2">
+      <div class="row">
+		<h4></h4>
+		<p style="font-size: larger; color:black;">
+			📱Please write your name, email address and a message <br>below if you have any questions.
+			One of our staff members will be happy to contact you directly and answer your questions as soon as possible. 
+		</p>
+    <style>
+      .btn{
+        color: rgb(0, 0, 0) !important;
+        font-weight: 500 !important;
+        border-color: rgb(0, 0, 0);
+
+        font-size: larger !important;
+      }
+      .btn:hover{
+        color: white !important;
+        background-color: rgb(41, 165, 41) !important;
+
+      }
+      .card{
+        border-color: rgb(0, 0, 0);
+        border-width: 2px;
+      }
+
+      .map{
+        position: absolute;
+        margin-left: 42em;
+        margin-top: 8em;
+
+      }
+
+      @media only screen and (max-width: 768px) {
+        /* For mobile phones: */
+        [class*="map"] {
+          position: relative;
+          width: 100%;
+          margin-top: 1em;
+          margin-right:0em;
+          margin-left:3em ;
+    
+        }
+      
+      }
+    </style>
+    <div class="card col-md-7">
+    <div class="card-body">
+      <form method="post">
+        {% csrf_token %}
+            {{form.as_p}}
+            <button type="submit" class="btn btn-outline-success">Send</button>
+        </form>
+    </div>
+
+  </div>
+  
+    <div class="map"><iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d228173.28470853186!2d87.1254569683946!3d26.673843040675607!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c66e80fbfa9%3A0x38094d1a7c974283!2sItahari!5e0!3m2!1sen!2snp!4v1642310904236!5m2!1sen!2snp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe></div>
+
+ 
+
+      </div>
+    </div>
+
+
+{% endblock content %}

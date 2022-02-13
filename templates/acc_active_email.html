@@ -1,0 +1,13 @@
+{% autoescape off %}
+Hi {{ user.first_name }},
+
+Thank you for joing us. You are just one click away from getting connected to us.
+Please click on the link to confirm your registration,
+
+http://{{ domain }}{% url 'activate' uidb64=uid token=token %}
+
+
+Please try resetting your password if the activation link shows "Activation link inavlid!!" error. In case of any other issues, please report to the department.
+
+
+{% endautoescape %}

@@ -1,0 +1,132 @@
+{%extends 'base.html' %}
+
+{% load static %}
+
+{%block content%}
+
+<!-- HOME -->
+<section class="section-hero overlay inner-page bg-image" style="background-image: url('{% static 'images/about_1.jpg' %}');"  id="home-section">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h1 class="text-white font-weight-bold">Privacy Policy</h1>
+          <div class="custom-breadcrumbs">
+            <a href="#">Home</a> <span class="mx-2 slash">/</span>
+            <span class="text-white"><strong> Privacy</strong></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+
+
+<style>
+    .card{
+        margin-left: 15em !important;
+        margin-right: 15em !important;
+        margin-top:10px !important;
+        margin-bottom: 10px !important;
+    }
+
+    .card-header{
+        color: black;
+        text-align: center !important;
+        background-color: grey !important;
+        font-size: larger !important;
+        font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif !important;
+        font-weight: 900 !important;
+    }
+</style>
+
+  <div class="card">
+    <div class="card-header">
+        Privacy and Policy
+    </div>
+    <div class="card-body">
+        <table class="w-100 text-justify">
+            <tbody>
+            <tr>
+            <td colspan="2"><div>Our server is of the industry standard, and is powered by the most comprehensive software available today for secure e-commerce transactions. <a href="#">The JobHub.com</a> takes your privacy seriously. Please read the following to learn more on our privacy policy:</div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top">»</td>
+            <td><div>This Privacy Policy covers all your personal and identifiable information that we collect from you. When you register with <a href="#">The JobHub.com</a>, we ask for your name, email, street address and phone number. Once you register with us and sign-in to our services, your information is held confidential.</div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top">»</td>
+            <td><div><a href="#">The JobHub.com</a> also automatically receives and records information on our server, logs from your browser including your IP address and the page you requested. <a href="#">The JobHub.com</a> will not sell your personal and identifiable information.</div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top">»</td>
+            <td><div>By the very nature of its operations, <a href="#">The JobHub.com</a> establishes, maintains, and operates a number of business links with a number of Sponsors, to whom it sells both of its products and services.</div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top">»</td>
+            <td><div><a href="#">The JobHub.com</a> deems its policy in this regard to be made clear. Users of our service should be made well aware of the risks that are inherent not with us but on the Internet in general, which comes as a result of using these links. <a href="#">The JobHub.com</a> absolutely has NO CONTROL over what others may do with your information. Consequently, <a href="#">The JobHub.com</a> must necessarily decline any or all responsibilities in the event that your private information is violated by others. If you do not agree with this policy, you should not use the links which appear on our website.</div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top">»</td>
+            <td><div><a href="#">The JobHub.com</a> offers you the choice to edit your Account Information and preferences at any time, including your shopping cart info. </div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top"><span class="mr-3">»</span></td>
+             <td><div><a href="#">The JobHub.com</a> account information is password-protected for your privacy and security.</div></td>
+            <td></td>
+            </tr>
+            <tr>
+            <td class="align-top">»</td>
+            <td><div>Children should get prior permission from their parents to send any information about themselves (such as their names, email addresses, and phone numbers) over the Internet, to us or to anyone else. We would not accept the personal and identifiable information of anyone under 14 to the best of our knowledge.</div></td>
+            <td></td>
+            </tr>
+            </tbody></table>
+    </div>
+  </div>
+
+
+
+
+  <section class="py-5 bg-image overlay-primary fixed overlay" style="background-image: url('{% static 'images/hero_1.jpg' %}');">
+    <div class="container">
+      {% if request.user.role == "employer" %}
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-white">Want To Hire?</h2>
+          <p class="mb-0 text-white lead">To Hire You Need To Register as Employer and Login First.</p>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <a href="{% url 'jobapp:create-job' %}" class="btn btn-warning btn-block btn-lg">Post Your Job</a>
+        </div>
+      </div>
+      {% elif request.user.role == "employee" %}
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-white">Looking For A Job?🔎</h2>
+          <p class="mb-0 text-white lead">To Apply For Job You Need To register and Login as Employee First.</p>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <a href="{% url 'jobapp:job-list' %}" class="btn btn-warning btn-block btn-lg">Job List</a>
+        </div>
+      </div>
+      {% else %}
+      <div class="row align-items-center">
+        <div class="col-md-8">
+          <h2 class="text-white">Looking For A Job?🔎</h2>
+          <p class="mb-0 text-white lead">To Apply For Job You Need To register and Login as Employee First.</p>
+        </div>
+        <div class="col-md-3 ml-auto">
+          <a href="{% url 'account:employee-register' %}" class="btn btn-warning btn-block btn-lg">Sign Up</a>
+        </div>
+      </div>
+      {% endif %}
+    </div>
+  </section>
+
+{%endblock%}
